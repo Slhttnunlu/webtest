@@ -1,12 +1,10 @@
 package com.kaan;
 
 import com.thoughtworks.gauge.Step;
+import driver.Driver;
 import java.io.IOException;
 
-import static driver.Driver.webDriver;
-
-
-public class StepImplementation extends BasePageUtil {
+public class StepImplementation extends Driver {
 
 
     @Step("Open The homepage")

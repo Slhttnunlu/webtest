@@ -1,6 +1,8 @@
 package driver;
 
+import com.thoughtworks.gauge.AfterScenario;
 import com.thoughtworks.gauge.AfterSuite;
+import com.thoughtworks.gauge.BeforeScenario;
 import com.thoughtworks.gauge.BeforeSuite;
 import org.apache.commons.lang.StringUtils;
 import org.openqa.selenium.JavascriptExecutor;
@@ -22,7 +24,7 @@ public class Driver {
 
     // Initialize a webDriver instance of required browser
     // Since this does not have a significance in the application's business domain, the BeforeSuite hook is used to instantiate the webDriver
-    @BeforeSuite
+    @BeforeScenario
     public void initializeDriver() throws MalformedURLException {
         String hubURL = "http://hub.testinium.io/wd/hub";
         DesiredCapabilities capability = new DesiredCapabilities();
@@ -32,12 +34,11 @@ public class Driver {
         } else {
             System.setProperty("webdriver.chrome.driver", "/Users/testinium/IdeaProjects/Drivers/Chromedrivers/chromedriver");
             webDriver= new ChromeDriver();
-            webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         }
     }
 
     // Close the webDriver instance
-    @AfterSuite
+    @AfterScenario
     public void closeDriver() {
         webDriver.quit();
     }
