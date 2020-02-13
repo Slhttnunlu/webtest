@@ -9,6 +9,7 @@ To execute this specification, run
 
 Is Click Home Button
 -------------------
- Tags:isClickHomeButton
+Tags:isClickHomeButton
+
 *Open The homepage
 *Ekrani tam yap

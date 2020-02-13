@@ -17,8 +17,6 @@ import java.util.concurrent.TimeUnit;
 
 
 public class Driver {
-
-
     // Holds the WebDriver instance
     public static WebDriver webDriver;
 
