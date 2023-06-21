@@ -9,8 +9,10 @@ public class StepImplementation extends Driver {
 
     @Step("Open The homepage")
     public void implementation() {
+        System.out.println("Url'e Gidiyor");
         String url="https://www.youtube.com";
         webDriver.get(url);
+        System.out.println("Url'e Gitti");
     }
 
     @Step("Ekrani tam yap")
