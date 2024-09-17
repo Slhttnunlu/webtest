@@ -26,7 +26,7 @@ public class Driver {
     // Since this does not have a significance in the application's business domain, the BeforeSuite hook is used to instantiate the webDriver
     @BeforeScenario
     public void initializeDriver() throws MalformedURLException {
-        String hubURL = "http://hub.testinium.io/wd/hub";
+        String hubURL = "http://hub-devcluster.testinium.io:4444/wd/hub";
         DesiredCapabilities capability = new DesiredCapabilities();
         if (StringUtils.isNotBlank(System.getenv("key"))) {
             capability.setCapability("key", System.getenv("key"));
